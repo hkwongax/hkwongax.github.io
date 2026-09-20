@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WONG Hok Kan</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background: #020617;
+      color: #ffffff;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 28px;
+      padding: 25px;
+    }
+    nav button {
+      border: 0;
+      background: none;
+      color: #94a3b8;
+      font-size: 15px;
+      cursor: pointer;
+    }
+    nav button.active { color: #67e8f9; }
+    section {
+      min-height: 80vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+      text-align: center;
+    }
+    h1 { margin: 0; font-size: clamp(48px, 8vw, 72px); }
+    h2 { margin: 0; font-size: 40px; }
+    p { margin-top: 16px; color: #67e8f9; font-size: 22px; }
+    .hidden { display: none; }
+  </style>
+</head>
+<body>
+  <nav>
+    <button id="homeButton" class="active" onclick="showPage('home')">Home</button>
+    <button id="aboutButton" onclick="showPage('about')">About</button>
+  </nav>
+
+  <section id="home">
+    <h1>WONG Hok Kan</h1>
+  </section>
+
+  <section id="about" class="hidden">
+    <div>
+      <h2>About</h2>
+      <p>BEng student in Electronic Engineering at HKUST</p>
+    </div>
+  </section>
+
+  <script>
+    function showPage(page) {
+      document.getElementById('home').classList.toggle('hidden', page !== 'home');
+      document.getElementById('about').classList.toggle('hidden', page !== 'about');
+      document.getElementById('homeButton').classList.toggle('active', page === 'home');
+      document.getElementById('aboutButton').classList.toggle('active', page === 'about');
+    }
+  </script>
+</body>
+</html>
