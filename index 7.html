@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfolio of Wong Hok Kan, an Electronic Engineering student at HKUST.">
+  <title>Wong Hok Kan | Electronic Engineering</title>
+  <style>
+    :root { --bg:#07111f; --panel:#0d1b2a; --text:#eef6ff; --muted:#a9b8c8; --accent:#39d0d8; --line:#20364c; }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body { margin:0; color:var(--text); background:linear-gradient(135deg,#050b14 0%,#0a1727 55%,#082331 100%); font-family:Inter,Arial,Helvetica,sans-serif; line-height:1.65; }
+    a { color:inherit; }
+    .wrap { width:min(1080px,calc(100% - 40px)); margin:auto; }
+    nav { position:sticky; top:0; z-index:10; border-bottom:1px solid rgba(255,255,255,.08); background:rgba(5,11,20,.86); backdrop-filter:blur(14px); }
+    nav .wrap { min-height:68px; display:flex; align-items:center; justify-content:space-between; gap:22px; }
+    .brand { font-weight:800; letter-spacing:.04em; text-decoration:none; }
+    .links { display:flex; flex-wrap:wrap; gap:22px; }
+    .links a { color:var(--muted); text-decoration:none; font-size:.94rem; }
+    .links a:hover { color:var(--accent); }
+    header { min-height:76vh; display:grid; align-items:center; padding:90px 0 70px; }
+    .eyebrow { color:var(--accent); font-weight:700; letter-spacing:.12em; text-transform:uppercase; font-size:.82rem; }
+    h1 { max-width:800px; margin:10px 0 14px; font-size:clamp(3rem,8vw,6.5rem); line-height:.96; letter-spacing:-.05em; }
+    .zh { color:var(--muted); font-size:clamp(1.25rem,3vw,1.8rem); font-weight:500; letter-spacing:.08em; }
+    .lead { max-width:720px; margin:24px 0 32px; color:var(--muted); font-size:clamp(1.05rem,2vw,1.25rem); }
+    .actions { display:flex; flex-wrap:wrap; gap:13px; }
+    .button { display:inline-block; padding:12px 18px; border:1px solid var(--accent); border-radius:10px; text-decoration:none; font-weight:700; }
+    .button.primary { background:var(--accent); color:#032028; }
+    .button:hover { transform:translateY(-2px); }
+    section { padding:75px 0; }
+    h2 { margin:0 0 28px; font-size:clamp(2rem,4vw,3rem); letter-spacing:-.03em; }
+    h2 span { color:var(--accent); }
+    .grid { display:grid; grid-template-columns:repeat(12,1fr); gap:22px; }
+    .card { grid-column:span 6; padding:27px; border:1px solid var(--line); border-radius:18px; background:rgba(13,27,42,.76); box-shadow:0 18px 45px rgba(0,0,0,.18); }
+    .card.full { grid-column:1/-1; }
+    .card h3 { margin:0 0 8px; font-size:1.28rem; }
+    .meta { color:var(--accent); font-weight:700; font-size:.9rem; }
+    .muted, .card p, li { color:var(--muted); }
+    ul { padding-left:20px; margin-bottom:0; }
+    .tags { display:flex; flex-wrap:wrap; gap:9px; margin-top:18px; }
+    .tag { color:#bff8fb; background:#0b3340; border:1px solid #175365; border-radius:999px; padding:5px 10px; font-size:.83rem; }
+    .skill-group { margin-bottom:18px; }
+    .skill-group strong { display:block; margin-bottom:5px; }
+    footer { margin-top:45px; padding:35px 0; border-top:1px solid var(--line); color:var(--muted); }
+    footer a { color:var(--accent); }
+    @media (max-width:720px) { .links { display:none; } .card { grid-column:1/-1; } header { min-height:auto; } }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="wrap">
+      <a class="brand" href="#top">WHK</a>
+      <div class="links">
+        <a href="#about">About</a><a href="#education">Education</a><a href="#projects">Projects</a><a href="#skills">Skills</a><a href="#contact">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <header id="top">
+    <div class="wrap">
+      <div class="eyebrow">Electronic Engineering · HKUST</div>
+      <h1>Wong Hok Kan</h1>
+      <div class="zh">黃學勤</div>
+      <p class="lead">Year 3 BEng Electronic Engineering student interested in embedded systems, computer networks, and software development.</p>
+      <div class="actions">
+        <a class="button primary" href="Wong_Hok_Kan_CV.pdf" download>Download CV</a>
+        <a class="button" href="https://github.com/hkwongax" target="_blank" rel="noopener">View GitHub</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section id="about"><div class="wrap"><h2><span>01.</span> About</h2><div class="card full"><p>I am a Year 3 Electronic Engineering student at The Hong Kong University of Science and Technology. I enjoy applying engineering concepts through programming, circuit work, networking experiments, and hands-on technical projects. I am currently building my experience across embedded systems, computer networks, and software development.</p></div></div></section>
+
+    <section id="education"><div class="wrap"><h2><span>02.</span> Education</h2><div class="card full"><h3>The Hong Kong University of Science and Technology</h3><div class="meta">BEng in Electronic Engineering · Sep 2024 - May 2028 (expected)</div><p>Year 3 student. Relevant coursework includes ELEC 3120 Computer Networks.</p></div></div></section>
+
+    <section id="projects"><div class="wrap"><h2><span>03.</span> Project</h2><div class="card full"><h3>FoggyTCP: User-Space TCP Implementation</h3><div class="meta">ELEC 3120 · Sep 2026 - Present</div><ul><li>Developing a user-space TCP implementation in C++.</li><li>Configured a Linux development environment with Vagrant and VirtualBox.</li><li>Using Git for version control and Wireshark for packet inspection and protocol debugging.</li><li>Working toward sliding-window transmission, loss recovery, and congestion-control functionality.</li></ul><div class="tags"><span class="tag">C++</span><span class="tag">Linux</span><span class="tag">Git</span><span class="tag">Wireshark</span><span class="tag">Vagrant</span><span class="tag">VirtualBox</span></div></div></div></section>
+
+    <section id="skills"><div class="wrap"><h2><span>04.</span> Skills</h2><div class="grid"><div class="card"><div class="skill-group"><strong>Programming</strong><span class="muted">C, C++, Python</span></div><div class="skill-group"><strong>Development</strong><span class="muted">Git, Linux, AI-assisted prototyping and debugging</span></div><div class="skill-group"><strong>Networking</strong><span class="muted">Wireshark, socket programming, TCP/IP fundamentals</span></div></div><div class="card"><div class="skill-group"><strong>Engineering</strong><span class="muted">Arduino, circuit design, oscilloscope operation, MATLAB</span></div><div class="skill-group"><strong>Virtualization</strong><span class="muted">Vagrant, VirtualBox</span></div><div class="skill-group"><strong>Languages</strong><span class="muted">Cantonese, English, Mandarin</span></div></div></div></div></section>
+
+    <section id="contact"><div class="wrap"><h2><span>05.</span> Contact</h2><div class="card full"><p>The best way to reach me is by email.</p><div class="actions"><a class="button primary" href="mailto:hkwongax@connect.ust.hk">hkwongax@connect.ust.hk</a><a class="button" href="https://github.com/hkwongax" target="_blank" rel="noopener">GitHub</a></div></div></div></section>
+  </main>
+
+  <footer><div class="wrap">© 2026 Wong Hok Kan · Built for GitHub Pages</div></footer>
+</body>
+</html>
