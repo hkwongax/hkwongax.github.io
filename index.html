@@ -1,88 +1,275 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="en" class="no-js">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Portfolio of Wong Hok Kan, an Electronic Engineering student at HKUST.">
-  <title>Wong Hok Kan | Electronic Engineering</title>
-  <style>
-    :root { --bg:#07111f; --panel:#0d1b2a; --text:#eef6ff; --muted:#a9b8c8; --accent:#39d0d8; --line:#20364c; }
-    * { box-sizing:border-box; }
-    html { scroll-behavior:smooth; }
-    body { margin:0; color:var(--text); background:linear-gradient(135deg,#050b14 0%,#0a1727 55%,#082331 100%); font-family:Inter,Arial,Helvetica,sans-serif; line-height:1.65; }
-    a { color:inherit; }
-    .wrap { width:min(1080px,calc(100% - 40px)); margin:auto; }
-    nav { position:sticky; top:0; z-index:10; border-bottom:1px solid rgba(255,255,255,.08); background:rgba(5,11,20,.86); backdrop-filter:blur(14px); }
-    nav .wrap { min-height:68px; display:flex; align-items:center; justify-content:space-between; gap:22px; }
-    .brand { font-weight:800; letter-spacing:.04em; text-decoration:none; }
-    .links { display:flex; flex-wrap:wrap; gap:22px; }
-    .links a { color:var(--muted); text-decoration:none; font-size:.94rem; }
-    .links a:hover { color:var(--accent); }
-    header { min-height:76vh; display:grid; align-items:center; padding:90px 0 70px; }
-    .eyebrow { color:var(--accent); font-weight:700; letter-spacing:.12em; text-transform:uppercase; font-size:.82rem; }
-    h1 { max-width:800px; margin:10px 0 14px; font-size:clamp(3rem,8vw,6.5rem); line-height:.96; letter-spacing:-.05em; }
-    .zh { color:var(--muted); font-size:clamp(1.25rem,3vw,1.8rem); font-weight:500; letter-spacing:.08em; }
-    .lead { max-width:720px; margin:24px 0 32px; color:var(--muted); font-size:clamp(1.05rem,2vw,1.25rem); }
-    .actions { display:flex; flex-wrap:wrap; gap:13px; }
-    .button { display:inline-block; padding:12px 18px; border:1px solid var(--accent); border-radius:10px; text-decoration:none; font-weight:700; }
-    .button.primary { background:var(--accent); color:#032028; }
-    .button:hover { transform:translateY(-2px); }
-    section { padding:75px 0; }
-    h2 { margin:0 0 28px; font-size:clamp(2rem,4vw,3rem); letter-spacing:-.03em; }
-    h2 span { color:var(--accent); }
-    .grid { display:grid; grid-template-columns:repeat(12,1fr); gap:22px; }
-    .card { grid-column:span 6; padding:27px; border:1px solid var(--line); border-radius:18px; background:rgba(13,27,42,.76); box-shadow:0 18px 45px rgba(0,0,0,.18); }
-    .card.full { grid-column:1/-1; }
-    .card h3 { margin:0 0 8px; font-size:1.28rem; }
-    .meta { color:var(--accent); font-weight:700; font-size:.9rem; }
-    .muted, .card p, li { color:var(--muted); }
-    ul { padding-left:20px; margin-bottom:0; }
-    .tags { display:flex; flex-wrap:wrap; gap:9px; margin-top:18px; }
-    .tag { color:#bff8fb; background:#0b3340; border:1px solid #175365; border-radius:999px; padding:5px 10px; font-size:.83rem; }
-    .skill-group { margin-bottom:18px; }
-    .skill-group strong { display:block; margin-bottom:5px; }
-    footer { margin-top:45px; padding:35px 0; border-top:1px solid var(--line); color:var(--muted); }
-    footer a { color:var(--accent); }
-    @media (max-width:720px) { .links { display:none; } .card { grid-column:1/-1; } header { min-height:auto; } }
-  </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Wong Hok Kan is an Electronic Engineering student at HKUST working across computer networks, systems programming, and hardware.">
+  <meta name="theme-color" content="#f4f1e9">
+  <meta property="og:title" content="Wong Hok Kan - Electronic Engineering">
+  <meta property="og:description" content="Networks, software, and circuits. Electronic Engineering at HKUST.">
+  <meta property="og:type" content="website">
+  <title>Wong Hok Kan - Electronic Engineering</title>
+  <link rel="stylesheet" href="style.css">
+  <script>document.documentElement.classList.replace('no-js', 'js')</script>
+  <script src="script.js" defer></script>
 </head>
 <body>
-  <nav>
-    <div class="wrap">
-      <a class="brand" href="#top">WHK</a>
-      <div class="links">
-        <a href="#about">About</a><a href="#education">Education</a><a href="#projects">Projects</a><a href="#opensource">Open Source</a><a href="#skills">Skills</a><a href="#contact">Contact</a>
-      </div>
-    </div>
-  </nav>
+  <a class="skip-link" href="#main">Skip to content</a>
 
-  <header id="top">
-    <div class="wrap">
-      <div class="eyebrow">Electronic Engineering · HKUST</div>
-      <h1>Wong Hok Kan</h1>
-      <div class="zh">黃學勤</div>
-      <p class="lead">Year 3 BEng Electronic Engineering student interested in computer networks, software development, and hardware design.</p>
-      <div class="actions">
-        <a class="button primary" href="Wong_Hok_Kan_CV.pdf" download>Download CV</a>
-        <a class="button" href="https://github.com/hkwongax" target="_blank" rel="noopener">View GitHub</a>
-      </div>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="#top" aria-label="Wong Hok Kan home">
+        <span class="brand-dot" aria-hidden="true"></span>
+        WONG HOK KAN
+        <span class="brand-cn" lang="zh-Hant">黃學勤</span>
+      </a>
+      <button class="menu-toggle" type="button" aria-controls="site-nav" aria-expanded="false">
+        Menu <span aria-hidden="true">＋</span>
+      </button>
+      <nav class="site-nav" id="site-nav" aria-label="Main navigation">
+        <a href="#focus">Focus</a>
+        <a href="#journey">Journey</a>
+        <a href="#work">Work</a>
+        <a href="#open-source">Open source</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+        <a class="nav-cv" href="Wong_Hok_Kan_CV.pdf">Curriculum vitae <span aria-hidden="true">↗</span></a>
+      </nav>
     </div>
   </header>
 
-  <main>
-    <section id="about"><div class="wrap"><h2><span>01.</span> About</h2><div class="card full"><p>I am a Year 3 Electronic Engineering student at The Hong Kong University of Science and Technology. I enjoy applying engineering concepts through programming, circuit work, networking experiments, and hands-on technical projects. I am currently building my experience across computer networks, software development, and hardware design.</p></div></div></section>
+  <main id="main">
+    <section class="hero wrap" id="top" aria-labelledby="hero-title">
+      <div class="hero-kicker">
+        <p class="eyebrow">WONG HOK KAN / ELECTRONIC ENGINEER &amp; SYSTEMS BUILDER</p>
+        <span class="hero-coordinate">HONG KONG · LEARNING BY BUILDING ↗</span>
+      </div>
 
-    <section id="education"><div class="wrap"><h2><span>02.</span> Education</h2><div class="card full"><h3>The Hong Kong University of Science and Technology</h3><div class="meta">BEng in Electronic Engineering · Sep 2024 - May 2028 (expected)</div><p>Year 3 student. Relevant coursework includes ELEC 3120 Computer Networks.</p></div></div></section>
+      <div class="idea-field" id="focus" data-topic="network">
+        <div class="idea-art" aria-hidden="true">
+          <svg viewBox="0 0 500 500" role="presentation">
+            <g class="idea-rings">
+              <ellipse cx="250" cy="250" rx="190" ry="115" transform="rotate(24 250 250)"></ellipse>
+              <ellipse cx="250" cy="250" rx="155" ry="210" transform="rotate(-32 250 250)"></ellipse>
+              <ellipse cx="250" cy="250" rx="205" ry="165" transform="rotate(76 250 250)"></ellipse>
+              <path d="M92 257 C160 130 330 83 410 205 C464 290 365 412 252 394 C137 376 62 300 92 257Z"></path>
+            </g>
+            <g class="idea-nodes">
+              <circle cx="95" cy="255" r="7"></circle>
+              <circle cx="147" cy="148" r="5"></circle>
+              <circle cx="272" cy="68" r="6"></circle>
+              <circle cx="396" cy="169" r="5"></circle>
+              <circle cx="428" cy="286" r="7"></circle>
+              <circle cx="322" cy="409" r="5"></circle>
+              <circle cx="181" cy="390" r="6"></circle>
+              <circle cx="72" cy="319" r="4"></circle>
+            </g>
+          </svg>
+          <span class="art-center">↗</span>
+        </div>
 
-    <section id="projects"><div class="wrap"><h2><span>03.</span> Project</h2><div class="card full"><h3>FoggyTCP: User-Space TCP Implementation</h3><div class="meta">ELEC 3120 · Sep 2026 - Present</div><ul><li>Developing a user-space TCP implementation in C++.</li><li>Configured a Linux development environment with Vagrant and VirtualBox.</li><li>Using Git for version control and Linux development tools for building, testing, and debugging the implementation.</li><li>Working toward sliding-window transmission, loss recovery, and congestion-control functionality.</li></ul><div class="tags"><span class="tag">C++</span><span class="tag">Linux</span><span class="tag">Git</span><span class="tag">Vagrant</span><span class="tag">VirtualBox</span></div></div></div></section>
+        <div class="hero-statement">
+          <h1 id="hero-title">Engineering,<em>end to end.</em></h1>
+          <div class="hero-annotation" aria-live="polite">
+            <p class="hero-direction" id="topic-description">Building a user-space TCP stack in C++ and learning how timing, loss, and congestion shape reliable networking.</p>
+            <a class="hero-direction-link" id="topic-link" href="#work">Explore FoggyTCP <span aria-hidden="true">↗</span></a>
+          </div>
+        </div>
 
-    <section id="opensource"><div class="wrap"><h2><span>04.</span> Open Source</h2><div class="card full"><h3>Contributions</h3><div class="meta">Oct 2026</div><ul><li><strong>Kinto (Mozilla Services)</strong> — fixed a months-long Read the Docs build failure caused by the removed pkg_resources API; verified with unit tests and a local docs build (<a href="https://github.com/Kinto/kinto/pull/3803" target="_blank" rel="noopener">PR #3803</a>, merged).</li><li><strong>OffPDF (Rust/Tauri)</strong> — authored the local-AI licensing matrix used in their runtime and model research, verifying licenses and primary sources for 11 candidates (<a href="https://github.com/McanKul/offpdf/pull/127" target="_blank" rel="noopener">PR #127</a>, merged).</li><li><strong>React (react.dev)</strong> — documented compiler syntax that prevents compilation inside try/catch, verified across 20+ compiled samples (<a href="https://github.com/reactjs/react.dev/pull/8697" target="_blank" rel="noopener">PR #8697</a>, in review).</li></ul></div></div></section>
+        <button class="floating-word word-network active" type="button" data-topic="network" aria-pressed="true"><span aria-hidden="true">↗</span> Networked systems</button>
+        <button class="floating-word word-code" type="button" data-topic="code" aria-pressed="false"><span aria-hidden="true">✳</span> C / C++</button>
+        <button class="floating-word word-linux" type="button" data-topic="linux" aria-pressed="false"><span aria-hidden="true">⌁</span> Linux tooling</button>
+        <button class="floating-word word-hardware" type="button" data-topic="hardware" aria-pressed="false"><span aria-hidden="true">◎</span> Circuit design</button>
+        <button class="floating-word word-open" type="button" data-topic="open" aria-pressed="false"><span aria-hidden="true">+</span> Open source</button>
+        <button class="floating-word word-tcp" type="button" data-topic="tcp" aria-pressed="false"><span aria-hidden="true">↔</span> TCP/IP</button>
+      </div>
 
-    <section id="skills"><div class="wrap"><h2><span>05.</span> Skills</h2><div class="grid"><div class="card"><div class="skill-group"><strong>Programming</strong><span class="muted">C, C++, Python</span></div><div class="skill-group"><strong>Development</strong><span class="muted">Git, Linux, AI-assisted development with Codex</span></div><div class="skill-group"><strong>Networking</strong><span class="muted">Socket programming, TCP/IP fundamentals</span></div></div><div class="card"><div class="skill-group"><strong>Engineering</strong><span class="muted">Arduino, circuit design, oscilloscope operation, MATLAB</span></div><div class="skill-group"><strong>Virtualization</strong><span class="muted">Vagrant, VirtualBox</span></div><div class="skill-group"><strong>Languages</strong><span class="muted">Cantonese, English, Mandarin</span></div></div></div></div></section>
+      <div class="hero-bottom">
+        <div class="hero-introduction">
+          <div class="monogram" aria-hidden="true">WHK</div>
+          <div>
+            <p>Hi, I’m Hok Kan. I like making technical systems understandable and useful.</p>
+            <p class="hero-context">Year 3 at <a href="https://hkust.edu.hk/">HKUST</a> · Building <a href="#work">FoggyTCP</a> · Contributing to open source</p>
+          </div>
+        </div>
+      </div>
+      <div class="hero-tools">
+        <p>Choose a focus to see what I’m working on.</p>
+        <button class="motion-toggle" type="button" aria-label="Animate background ideas" aria-pressed="true">
+          <span class="motion-dot" aria-hidden="true"></span>
+          <span class="motion-label">Motion on</span>
+        </button>
+      </div>
+    </section>
 
-    <section id="contact"><div class="wrap"><h2><span>06.</span> Contact</h2><div class="card full"><p>The best way to reach me is by email.</p><div class="actions"><a class="button primary" href="mailto:hkwongax@connect.ust.hk">hkwongax@connect.ust.hk</a><a class="button" href="https://github.com/hkwongax" target="_blank" rel="noopener">GitHub</a></div></div></div></section>
+    <section class="journey wrap" id="journey" aria-labelledby="journey-title">
+      <div class="rail-heading">
+        <h2 id="journey-title">A few stops along the way.</h2>
+        <span>SELECT A STOP TO EXPLORE <span aria-hidden="true">↘</span></span>
+      </div>
+      <div class="affiliation-list" aria-label="Education and engineering work">
+        <button class="affiliation active" type="button" data-place="hkust" aria-pressed="true"><strong>HKUST</strong><span>NOW</span></button>
+        <button class="affiliation" type="button" data-place="tcp" aria-pressed="false"><strong>FoggyTCP</strong><span>2026</span></button>
+        <button class="affiliation" type="button" data-place="kinto" aria-pressed="false"><strong>Kinto</strong><span>2026</span></button>
+        <button class="affiliation" type="button" data-place="offpdf" aria-pressed="false"><strong>OffPDF</strong><span>2026</span></button>
+        <button class="affiliation" type="button" data-place="activist" aria-pressed="false"><strong>Activist</strong><span>2026</span></button>
+      </div>
+      <div class="journey-detail" aria-live="polite" aria-atomic="true">
+        <span class="detail-marker" aria-hidden="true">↳</span>
+        <strong id="place-name">HKUST</strong>
+        <span id="place-role">BEng Electronic Engineering · 2024–2028</span>
+        <p id="place-description">Building a foundation in networks, systems, circuits, and practical engineering.</p>
+        <a href="#about">More about me <span aria-hidden="true">↗</span></a>
+      </div>
+    </section>
+
+    <section class="building section-pad" id="work" aria-labelledby="work-title">
+      <div class="wrap">
+        <div class="section-heading">
+          <p class="eyebrow">01 / CURRENT WORK</p>
+          <p>What I’m spending my time on.</p>
+        </div>
+        <div class="feature">
+          <div class="feature-copy">
+            <span class="feature-wordmark">FoggyTCP</span>
+            <h2 id="work-title">Networks,<br>from first principles.</h2>
+            <p>I’m building a user-space TCP implementation in C++ for Computer Networks. The project has made me think carefully about sliding windows, packet loss, congestion control, and how to reproduce failures in a controlled Linux environment.</p>
+            <p>My goal is not just to make the protocol work once, but to understand why it works and how to test it when it does not.</p>
+            <div class="work-tags">
+              <span>C++</span><span>TCP/IP</span><span>LINUX</span><span>TESTING</span>
+            </div>
+            <a class="button light" href="https://github.com/hkwongax" target="_blank" rel="noopener">View GitHub <span aria-hidden="true">↗</span></a>
+          </div>
+          <div class="feature-visual" aria-label="Abstract FoggyTCP development environment">
+            <div class="terminal-bar"><span></span><span></span><span></span><b>foggy-tcp</b></div>
+            <div class="terminal-body">
+              <p><span>$</span> vagrant up</p>
+              <p><span>›</span> isolated Linux environment ready</p>
+              <p><span>$</span> make</p>
+              <p><span>›</span> compiling tcp stack...</p>
+              <div class="packet-diagram" aria-hidden="true">
+                <span class="packet-node">SYN</span><i></i><span class="packet-node">ACK</span><i></i><span class="packet-node">DATA</span>
+              </div>
+              <p class="terminal-active"><span>●</span> refining loss recovery</p>
+              <p class="terminal-muted">window · retransmission · congestion</p>
+            </div>
+          </div>
+        </div>
+        <div class="other-projects">
+          <p class="small-label">ALSO EXPLORING</p>
+          <a class="project-link" href="https://github.com/Kinto/kinto/pull/3802" target="_blank" rel="noopener">
+            <span class="project-symbol" aria-hidden="true">⌁</span>
+            <div><h3>Kinto documentation</h3><p>PostgreSQL index guidance and clearer API references.</p></div>
+            <span aria-hidden="true">↗</span>
+          </a>
+          <a class="project-link" href="https://github.com/opsdroid/opsdroid/pull/2079" target="_blank" rel="noopener">
+            <span class="project-symbol" aria-hidden="true">◎</span>
+            <div><h3>Opsdroid loader</h3><p>Modernising plugin discovery beyond setuptools.</p></div>
+            <span aria-hidden="true">↗</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="research wrap section-pad" id="open-source" aria-labelledby="open-source-title">
+      <div class="section-heading">
+        <p class="eyebrow">02 / OPEN SOURCE</p>
+        <a class="text-link" href="https://github.com/hkwongax" target="_blank" rel="noopener">All GitHub activity <span aria-hidden="true">↗</span></a>
+      </div>
+      <div class="research-heading">
+        <h2 id="open-source-title">Careful changes.<br><em>Measurable outcomes.</em></h2>
+        <p>I contribute where documentation, testing, and systems work meet. Every item below was merged into the project’s main branch.</p>
+      </div>
+      <div class="research-controls">
+        <div class="filters" role="group" aria-label="Filter open-source contributions">
+          <button class="filter active" type="button" data-filter="all" aria-pressed="true">All work</button>
+          <button class="filter" type="button" data-filter="security" aria-pressed="false">Security</button>
+          <button class="filter" type="button" data-filter="documentation" aria-pressed="false">Documentation</button>
+        </div>
+        <span class="research-count" aria-live="polite">3 merged contributions</span>
+      </div>
+      <div class="project-list">
+        <article class="project-row" data-topics="security documentation">
+          <span class="project-year">2026</span>
+          <div>
+            <p class="project-venue">ACTIVIST.ORG · DEPENDENCY SECURITY</p>
+            <h3><a href="https://github.com/activist-org/activist/pull/2457" target="_blank" rel="noopener">Updated Vue to remediate a high-severity XSS advisory</a></h3>
+            <p>Also aligned the Vitest coverage provider and verified the frontend with 1,906 unit tests, linting, and type checks.</p>
+          </div>
+          <a class="project-arrow" href="https://github.com/activist-org/activist/pull/2457" target="_blank" rel="noopener" aria-label="Open Activist pull request 2457">↗</a>
+        </article>
+        <article class="project-row" data-topics="documentation">
+          <span class="project-year">2026</span>
+          <div>
+            <p class="project-venue">KINTO · MOZILLA SERVICES</p>
+            <h3><a href="https://github.com/Kinto/kinto/pull/3803" target="_blank" rel="noopener">Repaired months of failing Read the Docs builds</a></h3>
+            <p>Traced the failure to a removed dependency API and verified the replacement with unit tests and a local documentation build.</p>
+          </div>
+          <a class="project-arrow" href="https://github.com/Kinto/kinto/pull/3803" target="_blank" rel="noopener" aria-label="Open Kinto pull request 3803">↗</a>
+        </article>
+        <article class="project-row" data-topics="documentation security">
+          <span class="project-year">2026</span>
+          <div>
+            <p class="project-venue">OFFPDF · LOCAL AI</p>
+            <h3><a href="https://github.com/McanKul/offpdf/pull/127" target="_blank" rel="noopener">Created a licensing matrix for local AI candidates</a></h3>
+            <p>Compared runtime and model redistribution terms for 11 candidates using primary licence texts and official model cards.</p>
+          </div>
+          <a class="project-arrow" href="https://github.com/McanKul/offpdf/pull/127" target="_blank" rel="noopener" aria-label="Open OffPDF pull request 127">↗</a>
+        </article>
+      </div>
+    </section>
+
+    <section class="about section-pad" id="about" aria-labelledby="about-title">
+      <div class="wrap about-grid">
+        <div class="about-art" aria-hidden="true">
+          <span>WHK</span>
+          <svg viewBox="0 0 420 500">
+            <path d="M60 360 L150 90 L255 360 L345 120"></path>
+            <path d="M84 306 H326"></path>
+            <path d="M108 248 H302"></path>
+            <circle cx="150" cy="90" r="8"></circle>
+            <circle cx="255" cy="360" r="8"></circle>
+            <circle cx="345" cy="120" r="8"></circle>
+          </svg>
+          <small>NETWORK · SOFTWARE · HARDWARE</small>
+        </div>
+        <div class="about-copy">
+          <p class="eyebrow">03 / ABOUT</p>
+          <h2 id="about-title">I like systems where software meets the physical world.</h2>
+          <p>I’m a third-year Electronic Engineering student at the Hong Kong University of Science and Technology. My current work sits between computer networks, systems programming, and circuit design.</p>
+          <p>I learn best by building something concrete, testing it, and improving the explanation around it. FoggyTCP gives me that opportunity in software. Circuit labs and hardware work give me the same lesson in a different medium.</p>
+          <p class="about-note">I’m open to internship conversations in networking, software engineering, hardware, and circuit design.</p>
+          <div class="profile-links">
+            <a href="mailto:hkwongax@connect.ust.hk">Email <span aria-hidden="true">↗</span></a>
+            <a href="https://github.com/hkwongax" target="_blank" rel="noopener">GitHub <span aria-hidden="true">↗</span></a>
+            <a href="Wong_Hok_Kan_CV.pdf">CV <span aria-hidden="true">↗</span></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact section-pad" id="contact" aria-labelledby="contact-title">
+      <div class="wrap contact-grid">
+        <div>
+          <p class="eyebrow">04 / CONTACT</p>
+          <h2 id="contact-title">Let’s make<br><em>something useful.</em></h2>
+        </div>
+        <div class="contact-copy">
+          <p>The clearest way to reach me is by email. I’m happy to discuss technical projects, internships, or a problem worth understanding.</p>
+          <a class="email-link" href="mailto:hkwongax@connect.ust.hk">hkwongax@connect.ust.hk <span aria-hidden="true">↗</span></a>
+          <p class="contact-location">Hong Kong<br>BEng Electronic Engineering · HKUST</p>
+        </div>
+      </div>
+    </section>
   </main>
 
-  <footer><div class="wrap">© 2026 Wong Hok Kan · Built for GitHub Pages</div></footer>
+  <footer class="footer wrap">
+    <div>
+      <a href="#top">Back to top ↑</a>
+      <a href="https://github.com/hkwongax" target="_blank" rel="noopener">GitHub</a>
+      <a href="Wong_Hok_Kan_CV.pdf">CV</a>
+    </div>
+    <small>© 2026 Wong Hok Kan</small>
+  </footer>
 </body>
 </html>
