@@ -138,7 +138,7 @@ filterButtons.forEach((button) => {
       row.hidden = !show;
       if (show) visible += 1;
     });
-    researchCount.textContent = `${visible} merged contribution${visible === 1 ? '' : 's'}`;
+    researchCount.textContent = `${visible} merged pull request${visible === 1 ? '' : 's'}`;
   });
 });
 
