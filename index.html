@@ -58,7 +58,7 @@
         <div class="hero-statement">
           <h1 id="hero-title">Engineering,<em>end to end.</em></h1>
           <div class="hero-annotation" aria-live="polite">
-            <p class="hero-direction" id="topic-description">Built a full user-space TCP and streaming HTTP stack in C++ (Checkpoints 1–4) from socket fundamentals up to chunked streaming.</p>
+            <p class="hero-direction" id="topic-description">Built a full user-space TCP and chunked-streaming HTTP stack in C/C++ from socket fundamentals up to route handling and streaming.</p>
             <a class="hero-direction-link" id="topic-link" href="#work">Explore FoggyTCP <span aria-hidden="true">↗</span></a>
           </div>
         </div>
@@ -106,7 +106,7 @@
         <span class="detail-marker" aria-hidden="true">↳</span>
         <strong id="place-name">HKUST</strong>
         <span id="place-role">BEng Electronic Engineering · 2024–2028</span>
-        <p id="place-description">Coursework spanning Computer Networks (ELEC 3120), Signals &amp; Systems (ELEC 2100), and circuit labs.</p>
+        <p id="place-description">Coursework spanning Computer Networks, Signals &amp; Systems, and analog/digital circuit labs.</p>
         <a href="#about">More about me <span aria-hidden="true">↗</span></a>
       </div>
     </section>
@@ -120,29 +120,28 @@
 
         <div class="feature">
           <div class="feature-copy">
-            <span class="feature-wordmark">FoggyTCP &amp; FoggyHTTP · ELEC 3120</span>
+            <span class="feature-wordmark">FoggyTCP &amp; FoggyHTTP · Systems &amp; Networking</span>
             <h2 id="work-title">Networks,<br>from first principles.</h2>
-            <p>Completed all four checkpoints of HKUST’s Computer Networks project in C/C++: socket delay measurements, a user-space TCP implementation with sliding windows, fast retransmission, and congestion control, followed by an HTTP layer and chunked streaming server (<code>foggy-llama</code> / <code>foggy-http</code>) with route registration and request/response parsing.</p>
+            <p>Built a complete user-space TCP and streaming HTTP stack in C/C++: socket delay measurements, a user-space TCP implementation with sliding windows, fast retransmission, and congestion control, followed by an HTTP layer and chunked streaming server (<code>foggy-llama</code> / <code>foggy-http</code>) with route registration and request/response parsing.</p>
             <p>Built and debugged inside an isolated Vagrant/VirtualBox Linux environment to reproduce packet loss, reordering, and congestion deterministically.</p>
             <div class="work-tags">
               <span>C / C++</span><span>USER-SPACE TCP</span><span>HTTP STREAMING</span><span>LINUX</span><span>VAGRANT</span>
             </div>
             <div class="feature-actions">
-              <a class="button light" href="https://foggynetwork.com/project/" target="_blank" rel="noopener">Project spec <span aria-hidden="true">↗</span></a>
-              <a class="button ghost" href="https://github.com/hkwongax" target="_blank" rel="noopener">GitHub profile <span aria-hidden="true">↗</span></a>
+              <a class="button light" href="https://github.com/hkwongax" target="_blank" rel="noopener">GitHub profile <span aria-hidden="true">↗</span></a>
             </div>
           </div>
           <div class="feature-visual" aria-label="Abstract FoggyTCP and FoggyHTTP development environment">
             <div class="terminal-bar"><span></span><span></span><span></span><b>foggy-stack</b></div>
             <div class="terminal-body">
               <p><span>$</span> vagrant up &amp;&amp; make</p>
-              <p><span>›</span> cp1: socket delay benchmarks ok</p>
-              <p><span>›</span> cp2: sliding window &amp; loss recovery ok</p>
-              <p><span>›</span> cp3–4: http routes &amp; chunked stream ok</p>
+              <p><span>›</span> sockets: delay &amp; throughput benchmarks ok</p>
+              <p><span>›</span> tcp: sliding window &amp; loss recovery ok</p>
+              <p><span>›</span> http: route parsing &amp; chunked stream ok</p>
               <div class="packet-diagram" aria-hidden="true">
                 <span class="packet-node">SYN</span><i></i><span class="packet-node">TCP</span><i></i><span class="packet-node">HTTP</span><i></i><span class="packet-node">STREAM</span>
               </div>
-              <p class="terminal-active"><span>●</span> checkpoints 1–4 completed</p>
+              <p class="terminal-active"><span>●</span> user-space tcp + streaming http</p>
               <p class="terminal-muted">retransmission · congestion · chunked transfer</p>
             </div>
           </div>
@@ -162,24 +161,11 @@
             <img class="feature-photo" src="robot-car.jpg" alt="Autonomous line-tracking robot car with Arduino Nano, breadboard, and front-bar optical sensors positioned on the white track line">
             <figcaption class="photo-caption">
               <span>Arduino Nano · 12V PWM drive</span>
-              17/17 track tasks · 1 take
+              17/17 tasks · ~20s · 1 take
             </figcaption>
           </figure>
         </div>
 
-        <div class="other-projects">
-          <p class="small-label">ALSO IN REVIEW</p>
-          <a class="project-link" href="https://github.com/reactjs/react.dev/pull/8697" target="_blank" rel="noopener">
-            <span class="project-symbol" aria-hidden="true">⌁</span>
-            <div><h3>React documentation (#8697)</h3><p>Documenting compiler syntax unsupported inside try/catch.</p></div>
-            <span aria-hidden="true">↗</span>
-          </a>
-          <a class="project-link" href="https://github.com/opsdroid/opsdroid/pull/2079" target="_blank" rel="noopener">
-            <span class="project-symbol" aria-hidden="true">◎</span>
-            <div><h3>Opsdroid loader (#2079)</h3><p>Modernizing plugin discovery beyond setuptools.</p></div>
-            <span aria-hidden="true">↗</span>
-          </a>
-        </div>
       </div>
     </section>
 
@@ -249,7 +235,7 @@
           <p>I learn best by building something concrete, testing it under real constraints, and documenting why it works. FoggyTCP and FoggyHTTP gave me that rigor in networked software; building an autonomous robot car and circuit labs gave me the same discipline in hardware.</p>
           <p class="about-note">Open to internships in software engineering, computer networking, embedded systems, and hardware/circuit design.</p>
           <div class="profile-links">
-            <a href="mailto:hkwongax@connect.ust.hk">Email <span aria-hidden="true">↗</span></a>
+            <a href="mailto:whokkan@gmail.com">Email <span aria-hidden="true">↗</span></a>
             <a href="https://github.com/hkwongax" target="_blank" rel="noopener">GitHub <span aria-hidden="true">↗</span></a>
             <a href="Wong_Hok_Kan_CV.pdf" target="_blank" rel="noopener">CV — Software &amp; Networking <span aria-hidden="true">↗</span></a>
             <a href="Wong_Hok_Kan_CV_Hardware.pdf" target="_blank" rel="noopener">CV — Hardware &amp; Embedded <span aria-hidden="true">↗</span></a>
@@ -262,11 +248,11 @@
       <div class="wrap contact-grid">
         <div>
           <p class="eyebrow">04 / CONTACT</p>
-          <h2 id="contact-title">Let’s make<br><em>something useful.</em></h2>
+          <h2 id="contact-title">Open to<br><em>new opportunities.</em></h2>
         </div>
         <div class="contact-copy">
           <p>The clearest way to reach me is by email. I’m happy to discuss technical projects, internships, or a hard systems problem worth understanding.</p>
-          <a class="email-link" href="mailto:hkwongax@connect.ust.hk">hkwongax@connect.ust.hk <span aria-hidden="true">↗</span></a>
+          <a class="email-link" href="mailto:whokkan@gmail.com">whokkan@gmail.com <span aria-hidden="true">↗</span></a>
           <p class="contact-location">Hong Kong<br>BEng Electronic Engineering · HKUST</p>
         </div>
       </div>

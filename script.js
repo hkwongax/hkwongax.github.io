@@ -1,6 +1,6 @@
 const topics = {
   network: {
-    description: 'Built a full user-space TCP and streaming HTTP stack in C++ (Checkpoints 1–4) from socket fundamentals up to chunked streaming.',
+    description: 'Built a full user-space TCP and chunked-streaming HTTP stack in C/C++ from socket fundamentals up to route handling and streaming.',
     label: 'Explore FoggyTCP',
     href: '#work'
   },
@@ -41,13 +41,13 @@ const places = {
   tcp: {
     name: 'FoggyTCP & FoggyHTTP',
     role: 'Systems & Networking Project · Fall 2026',
-    description: 'Completed Checkpoints 1–4 in C/C++: user-space TCP, sliding window, congestion control, HTTP server, and chunked streaming.',
+    description: 'Built a user-space TCP protocol and chunked-streaming HTTP server in C/C++ with sliding windows, loss recovery, and congestion control.',
     href: '#work'
   },
   robot: {
     name: 'Robot Car',
     role: 'Hardware & Embedded Project · Fall 2025',
-    description: 'Arduino Nano autonomous line-tracking vehicle with optical sensors and differential PWM control; cleared all 17 tasks in one take.',
+    description: 'Arduino Nano autonomous line-tracking vehicle with optical sensors and differential PWM control; cleared all 17 tasks in ~20s on the first take.',
     href: '#hardware-work'
   },
   kinto: {
