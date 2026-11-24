@@ -3,14 +3,22 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Wong Hok Kan is an Electronic Engineering student at HKUST working across computer networks, systems programming, and hardware.">
+  <meta name="description" content="Wong Hok Kan is a third-year Electronic Engineering student at HKUST building networked systems in C++, embedded hardware on Arduino, and open-source software.">
   <meta name="theme-color" content="#f4f1e9">
-  <meta property="og:title" content="Wong Hok Kan - Electronic Engineering">
-  <meta property="og:description" content="Networks, software, and circuits. Electronic Engineering at HKUST.">
+  <meta property="og:title" content="Wong Hok Kan — Electronic Engineering &amp; Systems">
+  <meta property="og:description" content="User-space TCP/HTTP in C++, autonomous embedded hardware, and merged open-source contributions. BEng Electronic Engineering at HKUST.">
   <meta property="og:type" content="website">
-  <title>Wong Hok Kan - Electronic Engineering</title>
+  <meta property="og:url" content="https://hkwongax.github.io/">
+  <meta property="og:image" content="https://hkwongax.github.io/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Wong Hok Kan — Electronic Engineering &amp; Systems">
+  <meta name="twitter:description" content="User-space TCP/HTTP in C++, autonomous embedded hardware, and merged open-source contributions. HKUST.">
+  <meta name="twitter:image" content="https://hkwongax.github.io/og-image.png">
+  <title>Wong Hok Kan — Electronic Engineering &amp; Systems</title>
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="style.css?v=20261113">
+  <link rel="stylesheet" href="style.css?v=20261124">
   <script>document.documentElement.classList.replace('no-js', 'js')</script>
   <script src="script.js" defer></script>
 </head>
@@ -34,7 +42,7 @@
         <a href="#open-source">Open source</a>
         <a href="#about">About</a>
         <a href="#contact">Contact</a>
-        <a class="nav-cv" href="Wong_Hok_Kan_CV.pdf">Curriculum vitae <span aria-hidden="true">↗</span></a>
+        <a class="nav-cv" href="Wong_Hok_Kan_CV.pdf" target="_blank" rel="noopener">Curriculum vitae <span aria-hidden="true">↗</span></a>
       </nav>
     </div>
   </header>
@@ -50,7 +58,7 @@
         <div class="hero-statement">
           <h1 id="hero-title">Engineering,<em>end to end.</em></h1>
           <div class="hero-annotation" aria-live="polite">
-            <p class="hero-direction" id="topic-description">Building a user-space TCP stack in C++ and learning how timing, loss, and congestion shape reliable networking.</p>
+            <p class="hero-direction" id="topic-description">Built a full user-space TCP and streaming HTTP stack in C++ (Checkpoints 1–4) from socket fundamentals up to chunked streaming.</p>
             <a class="hero-direction-link" id="topic-link" href="#work">Explore FoggyTCP <span aria-hidden="true">↗</span></a>
           </div>
         </div>
@@ -58,23 +66,23 @@
         <button class="floating-word word-network active" type="button" data-topic="network" aria-pressed="true"><span aria-hidden="true">↗</span> Networked systems</button>
         <button class="floating-word word-code" type="button" data-topic="code" aria-pressed="false"><span aria-hidden="true">✳</span> C / C++</button>
         <button class="floating-word word-linux" type="button" data-topic="linux" aria-pressed="false"><span aria-hidden="true">⌁</span> Linux tooling</button>
-        <button class="floating-word word-hardware" type="button" data-topic="hardware" aria-pressed="false"><span aria-hidden="true">◎</span> Circuit design</button>
+        <button class="floating-word word-hardware" type="button" data-topic="hardware" aria-pressed="false"><span aria-hidden="true">◎</span> Embedded hardware</button>
         <button class="floating-word word-open" type="button" data-topic="open" aria-pressed="false"><span aria-hidden="true">+</span> Open source</button>
-        <button class="floating-word word-tcp" type="button" data-topic="tcp" aria-pressed="false"><span aria-hidden="true">↔</span> TCP/IP</button>
+        <button class="floating-word word-tcp" type="button" data-topic="tcp" aria-pressed="false"><span aria-hidden="true">↔</span> TCP / HTTP</button>
       </div>
 
       <div class="hero-bottom">
         <div class="hero-introduction">
           <div class="monogram" aria-hidden="true">WHK</div>
           <div>
-            <p>Hi, I’m Hok Kan. I like making technical systems understandable and useful.</p>
-            <p class="hero-context">Year 3 at <a href="https://hkust.edu.hk/">HKUST</a> · Building <a href="#work">FoggyTCP</a> · Contributing to open source</p>
+            <p>Hi, I’m Hok Kan. I build reliable systems across software, networks, and physical hardware.</p>
+            <p class="hero-context">Year 3 at <a href="https://hkust.edu.hk/" target="_blank" rel="noopener">HKUST</a> · <a href="#work">FoggyTCP &amp; Robot Car</a> · <a href="#open-source">5 merged open-source PRs</a></p>
           </div>
         </div>
       </div>
       <div class="hero-tools">
-        <p>Choose a focus to see what I’m working on.</p>
-        <button class="motion-toggle" type="button" aria-label="Animate background ideas" aria-pressed="true">
+        <p>Choose a focus to see what I’ve built.</p>
+        <button class="motion-toggle" type="button" aria-label="Pause background ideas" aria-pressed="true">
           <span class="motion-dot" aria-hidden="true"></span>
           <span class="motion-label">Motion on</span>
         </button>
@@ -87,8 +95,9 @@
         <span>SELECT A STOP TO EXPLORE <span aria-hidden="true">↘</span></span>
       </div>
       <div class="affiliation-list" aria-label="Education and engineering work">
-        <button class="affiliation active" type="button" data-place="hkust" aria-pressed="true"><strong>HKUST</strong><span>NOW</span></button>
+        <button class="affiliation active" type="button" data-place="hkust" aria-pressed="true"><strong>HKUST</strong><span>2024–2028</span></button>
         <button class="affiliation" type="button" data-place="tcp" aria-pressed="false"><strong>FoggyTCP</strong><span>2026</span></button>
+        <button class="affiliation" type="button" data-place="robot" aria-pressed="false"><strong>Robot Car</strong><span>2025</span></button>
         <button class="affiliation" type="button" data-place="kinto" aria-pressed="false"><strong>Kinto</strong><span>2026</span></button>
         <button class="affiliation" type="button" data-place="offpdf" aria-pressed="false"><strong>OffPDF</strong><span>2026</span></button>
         <button class="affiliation" type="button" data-place="activist" aria-pressed="false"><strong>Activist</strong><span>2026</span></button>
@@ -97,7 +106,7 @@
         <span class="detail-marker" aria-hidden="true">↳</span>
         <strong id="place-name">HKUST</strong>
         <span id="place-role">BEng Electronic Engineering · 2024–2028</span>
-        <p id="place-description">Building a foundation in networks, systems, circuits, and practical engineering.</p>
+        <p id="place-description">Coursework spanning Computer Networks (ELEC 3120), Signals &amp; Systems (ELEC 2100), and circuit labs.</p>
         <a href="#about">More about me <span aria-hidden="true">↗</span></a>
       </div>
     </section>
@@ -105,45 +114,69 @@
     <section class="building section-pad" id="work" aria-labelledby="work-title">
       <div class="wrap">
         <div class="section-heading">
-          <p class="eyebrow">01 / CURRENT WORK</p>
-          <p>What I’m spending my time on.</p>
+          <p class="eyebrow">01 / ENGINEERING WORK</p>
+          <p>Systems built from first principles — in software and hardware.</p>
         </div>
+
         <div class="feature">
           <div class="feature-copy">
-            <span class="feature-wordmark">FoggyTCP</span>
+            <span class="feature-wordmark">FoggyTCP &amp; FoggyHTTP · ELEC 3120</span>
             <h2 id="work-title">Networks,<br>from first principles.</h2>
-            <p>I’m building a user-space TCP implementation in C++ for Computer Networks. The project has made me think carefully about sliding windows, packet loss, congestion control, and how to reproduce failures in a controlled Linux environment.</p>
-            <p>My goal is not just to make the protocol work once, but to understand why it works and how to test it when it does not.</p>
+            <p>Completed all four checkpoints of HKUST’s Computer Networks project in C/C++: socket delay measurements, a user-space TCP implementation with sliding windows, fast retransmission, and congestion control, followed by an HTTP layer and chunked streaming server (<code>foggy-llama</code> / <code>foggy-http</code>) with route registration and request/response parsing.</p>
+            <p>Built and debugged inside an isolated Vagrant/VirtualBox Linux environment to reproduce packet loss, reordering, and congestion deterministically.</p>
             <div class="work-tags">
-              <span>C++</span><span>TCP/IP</span><span>LINUX</span><span>TESTING</span>
+              <span>C / C++</span><span>USER-SPACE TCP</span><span>HTTP STREAMING</span><span>LINUX</span><span>VAGRANT</span>
             </div>
-            <a class="button light" href="https://github.com/hkwongax" target="_blank" rel="noopener">View GitHub <span aria-hidden="true">↗</span></a>
+            <div class="feature-actions">
+              <a class="button light" href="https://foggynetwork.com/project/" target="_blank" rel="noopener">Project spec <span aria-hidden="true">↗</span></a>
+              <a class="button ghost" href="https://github.com/hkwongax" target="_blank" rel="noopener">GitHub profile <span aria-hidden="true">↗</span></a>
+            </div>
           </div>
-          <div class="feature-visual" aria-label="Abstract FoggyTCP development environment">
-            <div class="terminal-bar"><span></span><span></span><span></span><b>foggy-tcp</b></div>
+          <div class="feature-visual" aria-label="Abstract FoggyTCP and FoggyHTTP development environment">
+            <div class="terminal-bar"><span></span><span></span><span></span><b>foggy-stack</b></div>
             <div class="terminal-body">
-              <p><span>$</span> vagrant up</p>
-              <p><span>›</span> isolated Linux environment ready</p>
-              <p><span>$</span> make</p>
-              <p><span>›</span> compiling tcp stack...</p>
+              <p><span>$</span> vagrant up &amp;&amp; make</p>
+              <p><span>›</span> cp1: socket delay benchmarks ok</p>
+              <p><span>›</span> cp2: sliding window &amp; loss recovery ok</p>
+              <p><span>›</span> cp3–4: http routes &amp; chunked stream ok</p>
               <div class="packet-diagram" aria-hidden="true">
-                <span class="packet-node">SYN</span><i></i><span class="packet-node">ACK</span><i></i><span class="packet-node">DATA</span>
+                <span class="packet-node">SYN</span><i></i><span class="packet-node">TCP</span><i></i><span class="packet-node">HTTP</span><i></i><span class="packet-node">STREAM</span>
               </div>
-              <p class="terminal-active"><span>●</span> refining loss recovery</p>
-              <p class="terminal-muted">window · retransmission · congestion</p>
+              <p class="terminal-active"><span>●</span> checkpoints 1–4 completed</p>
+              <p class="terminal-muted">retransmission · congestion · chunked transfer</p>
             </div>
           </div>
         </div>
+
+        <div class="feature feature-secondary" id="hardware-work">
+          <div class="feature-copy">
+            <span class="feature-wordmark">Autonomous Robot Car · Hardware &amp; Embedded</span>
+            <h2>Hardware,<br>verified in one take.</h2>
+            <p>Designed, wired, and programmed an autonomous line-tracking robot car on an Arduino Nano and breadboard for HKUST’s <em>Running in HKUST</em> final challenge. Integrated an optical bright-sensing array (front-bar trackers and a bumper sensor) with dual DC motors driven via calibrated differential PWM control.</p>
+            <p>Engineered deterministic state-machine logic to handle T/Y/+ junctions, a 360° turn, square loop, U-curve, 180° turn, S-curve, and white-wall reverse-and-stop — completing the entire 17-task obstacle course in a single demo take.</p>
+            <div class="work-tags">
+              <span>ARDUINO NANO</span><span>PWM MOTOR CONTROL</span><span>OPTICAL SENSORS</span><span>CIRCUIT WIRING</span><span>ONE-TAKE PASS</span>
+            </div>
+          </div>
+          <figure class="feature-visual feature-visual-hw">
+            <img class="feature-photo" src="robot-car.jpg" alt="Autonomous line-tracking robot car with Arduino Nano, breadboard, and front-bar optical sensors positioned on the white track line">
+            <figcaption class="photo-caption">
+              <span>Arduino Nano · 12V PWM drive</span>
+              17/17 track tasks · 1 take
+            </figcaption>
+          </figure>
+        </div>
+
         <div class="other-projects">
-          <p class="small-label">ALSO EXPLORING</p>
+          <p class="small-label">ALSO IN REVIEW</p>
           <a class="project-link" href="https://github.com/reactjs/react.dev/pull/8697" target="_blank" rel="noopener">
             <span class="project-symbol" aria-hidden="true">⌁</span>
-            <div><h3>React documentation</h3><p>Compiler syntax inside try/catch, currently in review.</p></div>
+            <div><h3>React documentation (#8697)</h3><p>Documenting compiler syntax unsupported inside try/catch.</p></div>
             <span aria-hidden="true">↗</span>
           </a>
           <a class="project-link" href="https://github.com/opsdroid/opsdroid/pull/2079" target="_blank" rel="noopener">
             <span class="project-symbol" aria-hidden="true">◎</span>
-            <div><h3>Opsdroid loader</h3><p>Modernising plugin discovery beyond setuptools.</p></div>
+            <div><h3>Opsdroid loader (#2079)</h3><p>Modernizing plugin discovery beyond setuptools.</p></div>
             <span aria-hidden="true">↗</span>
           </a>
         </div>
@@ -157,50 +190,50 @@
       </div>
       <div class="research-heading">
         <h2 id="open-source-title">Careful changes.<br><em>Measurable outcomes.</em></h2>
-        <p>I contribute where documentation, testing, and systems work meet. Every item below was merged into the project’s main branch.</p>
+        <p>I contribute where documentation, testing, and systems reliability meet. Every pull request below was reviewed and merged upstream.</p>
       </div>
       <div class="research-controls">
         <div class="filters" role="group" aria-label="Filter open-source contributions">
           <button class="filter active" type="button" data-filter="all" aria-pressed="true">All work</button>
-          <button class="filter" type="button" data-filter="security" aria-pressed="false">Security</button>
-          <button class="filter" type="button" data-filter="documentation" aria-pressed="false">Documentation</button>
+          <button class="filter" type="button" data-filter="security" aria-pressed="false">Security &amp; Dependencies</button>
+          <button class="filter" type="button" data-filter="documentation" aria-pressed="false">Docs &amp; Systems</button>
         </div>
-        <span class="research-count" aria-live="polite">4 merged pull requests</span>
+        <span class="research-count" aria-live="polite">5 merged pull requests</span>
       </div>
       <div class="project-list">
-        <article class="project-row" data-topics="security">
+        <article class="project-row" data-topics="security" data-prs="2">
           <span class="project-year">2026</span>
           <div>
-            <p class="project-venue">ACTIVIST.ORG · DEPENDENCY SECURITY</p>
-            <h3><a href="https://github.com/activist-org/activist/pull/2457" target="_blank" rel="noopener">Updated Vue to remediate a high-severity XSS advisory</a></h3>
-            <p>Also aligned the Vitest coverage provider and verified the frontend with 1,906 unit tests, linting, and type checks.</p>
+            <p class="project-venue">ACTIVIST.ORG · DEPENDENCY SECURITY · PRs #2457 &amp; #2464</p>
+            <h3><a href="https://github.com/activist-org/activist/pull/2457" target="_blank" rel="noopener">Upgraded Vue to 3.5.42 for XSS remediation and aligned Vitest coverage</a></h3>
+            <p>Remediated a high-severity Vue XSS advisory (<a class="inline-pr" href="https://github.com/activist-org/activist/pull/2457" target="_blank" rel="noopener">#2457</a>) and aligned <code>coverage-v8</code> with Vitest (<a class="inline-pr" href="https://github.com/activist-org/activist/pull/2464" target="_blank" rel="noopener">#2464</a>); verified with 1,906 unit tests, linting, and type checks.</p>
           </div>
           <a class="project-arrow" href="https://github.com/activist-org/activist/pull/2457" target="_blank" rel="noopener" aria-label="Open Activist pull request 2457">↗</a>
         </article>
-        <article class="project-row" data-topics="documentation">
+        <article class="project-row" data-topics="documentation" data-prs="1">
           <span class="project-year">2026</span>
           <div>
-            <p class="project-venue">KINTO · MOZILLA SERVICES</p>
-            <h3><a href="https://github.com/Kinto/kinto/pull/3802" target="_blank" rel="noopener">Documented PostgreSQL index tuning for production deployments</a></h3>
-            <p>Added GIN index guidance, consolidated duplicate storage documentation, and aligned performance guidance with pg_stat_statements and EXPLAIN.</p>
+            <p class="project-venue">KINTO · MOZILLA SERVICES · PR #3802</p>
+            <h3><a href="https://github.com/Kinto/kinto/pull/3802" target="_blank" rel="noopener">Documented PostgreSQL JSONB index tuning for production deployments</a></h3>
+            <p>Added optional GIN (<code>jsonb_path_ops</code>) partial index and B-tree expression index guidance, consolidated duplicate storage docstrings, and aligned tuning workflows with <code>pg_stat_statements</code> and <code>EXPLAIN</code>.</p>
           </div>
           <a class="project-arrow" href="https://github.com/Kinto/kinto/pull/3802" target="_blank" rel="noopener" aria-label="Open Kinto pull request 3802">↗</a>
         </article>
-        <article class="project-row" data-topics="documentation">
+        <article class="project-row" data-topics="documentation" data-prs="1">
           <span class="project-year">2026</span>
           <div>
-            <p class="project-venue">KINTO · MOZILLA SERVICES</p>
-            <h3><a href="https://github.com/Kinto/kinto/pull/3803" target="_blank" rel="noopener">Repaired months of failing Read the Docs builds</a></h3>
-            <p>Traced the failure to a removed dependency API and verified the replacement with unit tests and a local documentation build.</p>
+            <p class="project-venue">KINTO · MOZILLA SERVICES · PR #3803</p>
+            <h3><a href="https://github.com/Kinto/kinto/pull/3803" target="_blank" rel="noopener">Repaired failing Read the Docs builds</a></h3>
+            <p>Diagnosed broken documentation builds in <code>.readthedocs.yaml</code>, restored dependency installation with <code>pip</code>, and verified locally with tests and clean documentation builds.</p>
           </div>
           <a class="project-arrow" href="https://github.com/Kinto/kinto/pull/3803" target="_blank" rel="noopener" aria-label="Open Kinto pull request 3803">↗</a>
         </article>
-        <article class="project-row" data-topics="documentation security">
+        <article class="project-row" data-topics="documentation security" data-prs="1">
           <span class="project-year">2026</span>
           <div>
-            <p class="project-venue">OFFPDF · LOCAL AI</p>
-            <h3><a href="https://github.com/McanKul/offpdf/pull/127" target="_blank" rel="noopener">Created a licensing matrix for local AI candidates</a></h3>
-            <p>Compared runtime and model redistribution terms for 11 candidates using primary licence texts and official model cards.</p>
+            <p class="project-venue">OFFPDF · LOCAL AI RUNTIME · PR #127</p>
+            <h3><a href="https://github.com/McanKul/offpdf/pull/127" target="_blank" rel="noopener">Authored a local AI runtime and model licensing matrix</a></h3>
+            <p>Compared redistribution and attribution terms across 11 local AI runtime and model candidates (including Llama and Gemma terms) using primary license texts, closing <a class="inline-pr" href="https://github.com/McanKul/offpdf/issues/93" target="_blank" rel="noopener">Issue #93</a>.</p>
           </div>
           <a class="project-arrow" href="https://github.com/McanKul/offpdf/pull/127" target="_blank" rel="noopener" aria-label="Open OffPDF pull request 127">↗</a>
         </article>
@@ -212,13 +245,14 @@
         <div class="about-copy">
           <p class="eyebrow">03 / ABOUT</p>
           <h2 id="about-title">I like systems where software meets the physical world.</h2>
-          <p>I’m a third-year Electronic Engineering student at the Hong Kong University of Science and Technology. My current work sits between computer networks, systems programming, and circuit design.</p>
-          <p>I learn best by building something concrete, testing it, and improving the explanation around it. FoggyTCP gives me that opportunity in software. Circuit labs and hardware work give me the same lesson in a different medium.</p>
-          <p class="about-note">I’m open to internship conversations in networking, software engineering, hardware, and circuit design.</p>
+          <p>I’m a third-year Electronic Engineering student at the Hong Kong University of Science and Technology. My work sits at the intersection of computer networks, C/C++ systems programming, and embedded circuit design.</p>
+          <p>I learn best by building something concrete, testing it under real constraints, and documenting why it works. FoggyTCP and FoggyHTTP gave me that rigor in networked software; building an autonomous robot car and circuit labs gave me the same discipline in hardware.</p>
+          <p class="about-note">Open to internships in software engineering, computer networking, embedded systems, and hardware/circuit design.</p>
           <div class="profile-links">
             <a href="mailto:hkwongax@connect.ust.hk">Email <span aria-hidden="true">↗</span></a>
             <a href="https://github.com/hkwongax" target="_blank" rel="noopener">GitHub <span aria-hidden="true">↗</span></a>
-            <a href="Wong_Hok_Kan_CV.pdf">CV <span aria-hidden="true">↗</span></a>
+            <a href="Wong_Hok_Kan_CV.pdf" target="_blank" rel="noopener">CV — Software &amp; Networking <span aria-hidden="true">↗</span></a>
+            <a href="Wong_Hok_Kan_CV_Hardware.pdf" target="_blank" rel="noopener">CV — Hardware &amp; Embedded <span aria-hidden="true">↗</span></a>
           </div>
         </div>
       </div>
@@ -231,7 +265,7 @@
           <h2 id="contact-title">Let’s make<br><em>something useful.</em></h2>
         </div>
         <div class="contact-copy">
-          <p>The clearest way to reach me is by email. I’m happy to discuss technical projects, internships, or a problem worth understanding.</p>
+          <p>The clearest way to reach me is by email. I’m happy to discuss technical projects, internships, or a hard systems problem worth understanding.</p>
           <a class="email-link" href="mailto:hkwongax@connect.ust.hk">hkwongax@connect.ust.hk <span aria-hidden="true">↗</span></a>
           <p class="contact-location">Hong Kong<br>BEng Electronic Engineering · HKUST</p>
         </div>
@@ -243,7 +277,8 @@
     <div>
       <a href="#top">Back to top ↑</a>
       <a href="https://github.com/hkwongax" target="_blank" rel="noopener">GitHub</a>
-      <a href="Wong_Hok_Kan_CV.pdf">CV</a>
+      <a href="Wong_Hok_Kan_CV.pdf" target="_blank" rel="noopener">CV (SWE)</a>
+      <a href="Wong_Hok_Kan_CV_Hardware.pdf" target="_blank" rel="noopener">CV (Hardware)</a>
     </div>
     <small>© 2026 Wong Hok Kan</small>
   </footer>

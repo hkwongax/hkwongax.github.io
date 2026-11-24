@@ -1,31 +1,31 @@
 const topics = {
   network: {
-    description: 'Building a user-space TCP stack in C++ and learning how timing, loss, and congestion shape reliable networking.',
+    description: 'Built a full user-space TCP and streaming HTTP stack in C++ (Checkpoints 1–4) from socket fundamentals up to chunked streaming.',
     label: 'Explore FoggyTCP',
     href: '#work'
   },
   code: {
-    description: 'Using C, C++, and Python to understand systems at the level where packets, processes, and interfaces meet.',
-    label: 'See technical work',
+    description: 'Writing C, C++, and Python to understand systems where packets, processes, and hardware interfaces meet.',
+    label: 'See open-source work',
     href: '#open-source'
   },
   linux: {
-    description: 'Building reproducible Linux environments with Git, Vagrant, and VirtualBox so changes are easier to test and explain.',
+    description: 'Building reproducible Linux environments with Git, Vagrant, and VirtualBox to debug packet loss and congestion deterministically.',
     label: 'See how I test',
     href: '#work'
   },
   hardware: {
-    description: 'Circuit labs and Arduino work give me a practical bridge between software behaviour and physical constraints.',
-    label: 'More about me',
-    href: '#about'
+    description: 'Built an autonomous Arduino Nano line-tracking robot car with optical sensors and calibrated PWM motor control — passed in one take.',
+    label: 'Explore robot car',
+    href: '#hardware-work'
   },
   open: {
-    description: 'Merged documentation, dependency, and test improvements across Activist, Kinto, and OffPDF.',
+    description: '5 merged pull requests across Activist.org, Kinto (Mozilla Services), and OffPDF covering security, PostgreSQL indexing, and AI licensing.',
     label: 'Explore open source',
     href: '#open-source'
   },
   tcp: {
-    description: 'Working through connection setup, sliding-window transmission, retransmission, and congestion control in a course project.',
+    description: 'Implemented sliding windows, fast retransmission, congestion control, HTTP route registration, and chunked streaming over user-space TCP.',
     label: 'Explore FoggyTCP',
     href: '#work'
   }
@@ -35,31 +35,37 @@ const places = {
   hkust: {
     name: 'HKUST',
     role: 'BEng Electronic Engineering · 2024–2028',
-    description: 'Building a foundation in networks, systems, circuits, and practical engineering.',
+    description: 'Coursework spanning Computer Networks, Signals & Systems, and analog/digital circuit labs.',
     href: '#about'
   },
   tcp: {
-    name: 'FoggyTCP',
-    role: 'Course project · 2026–present',
-    description: 'Developing a user-space TCP implementation in C++ with a reproducible Linux test environment.',
+    name: 'FoggyTCP & FoggyHTTP',
+    role: 'Systems & Networking Project · Fall 2026',
+    description: 'Completed Checkpoints 1–4 in C/C++: user-space TCP, sliding window, congestion control, HTTP server, and chunked streaming.',
     href: '#work'
+  },
+  robot: {
+    name: 'Robot Car',
+    role: 'Hardware & Embedded Project · Fall 2025',
+    description: 'Arduino Nano autonomous line-tracking vehicle with optical sensors and differential PWM control; cleared all 17 tasks in one take.',
+    href: '#hardware-work'
   },
   kinto: {
     name: 'Kinto',
     role: 'Open-source contributor · 2026',
-    description: 'Repaired failing documentation builds and contributed PostgreSQL indexing guidance for Mozilla’s storage service.',
+    description: 'Repaired failing Read the Docs builds (#3803) and documented PostgreSQL GIN/B-tree index tuning (#3802) for Mozilla’s storage service.',
     href: '#open-source'
   },
   offpdf: {
     name: 'OffPDF',
     role: 'Open-source contributor · 2026',
-    description: 'Researched licence terms for local AI runtimes and candidate models using primary sources.',
+    description: 'Authored a local AI runtime and model licensing matrix across 11 candidates using primary license texts (#127).',
     href: '#open-source'
   },
   activist: {
     name: 'Activist.org',
     role: 'Open-source contributor · 2026',
-    description: 'Merged frontend dependency security and testing-tool updates with a full regression test pass.',
+    description: 'Upgraded Vue to 3.5.42 for XSS remediation (#2457) and aligned Vitest coverage-v8 (#2464), verified with 1,906 unit tests.',
     href: '#open-source'
   }
 };
@@ -127,7 +133,7 @@ const researchCount = document.querySelector('.research-count');
 filterButtons.forEach((button) => {
   button.addEventListener('click', () => {
     const filter = button.dataset.filter;
-    let visible = 0;
+    let visiblePrs = 0;
     filterButtons.forEach((item) => {
       const active = item === button;
       item.classList.toggle('active', active);
@@ -136,9 +142,9 @@ filterButtons.forEach((button) => {
     projectRows.forEach((row) => {
       const show = filter === 'all' || row.dataset.topics.split(' ').includes(filter);
       row.hidden = !show;
-      if (show) visible += 1;
+      if (show) visiblePrs += Number(row.dataset.prs || 1);
     });
-    researchCount.textContent = `${visible} merged pull request${visible === 1 ? '' : 's'}`;
+    researchCount.textContent = `${visiblePrs} merged pull request${visiblePrs === 1 ? '' : 's'}`;
   });
 });
 
