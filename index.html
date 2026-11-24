@@ -20,7 +20,7 @@
   <link rel="icon" href="favicon.svg?v=20261124" type="image/svg+xml">
   <link rel="stylesheet" href="style.css?v=20261124">
   <script>document.documentElement.classList.replace('no-js', 'js')</script>
-  <script src="script.js?v=20261124" defer></script>
+  <script src="script.js?v=20261124b" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -50,7 +50,7 @@
   <main id="main">
     <section class="hero wrap" id="top" aria-labelledby="hero-title">
       <div class="hero-kicker">
-        <p class="eyebrow">WONG HOK KAN / ELECTRONIC ENGINEER &amp; SYSTEMS BUILDER</p>
+        <p class="eyebrow">WONG HOK KAN / ELECTRONIC ENGINEERING &amp; SYSTEMS</p>
         <span class="hero-coordinate">HONG KONG · LEARNING BY BUILDING ↗</span>
       </div>
 
@@ -58,7 +58,7 @@
         <div class="hero-statement">
           <h1 id="hero-title">Engineering,<em>end to end.</em></h1>
           <div class="hero-annotation" aria-live="polite">
-            <p class="hero-direction" id="topic-description">Built a full user-space TCP and chunked-streaming HTTP stack in C/C++ from socket fundamentals up to route handling and streaming.</p>
+            <p class="hero-direction" id="topic-description">Built a user-space TCP protocol and chunked-streaming HTTP server in C/C++ — from raw sockets to congestion control and route handling.</p>
             <a class="hero-direction-link" id="topic-link" href="#work">Explore FoggyTCP <span aria-hidden="true">↗</span></a>
           </div>
         </div>
@@ -122,8 +122,8 @@
           <div class="feature-copy">
             <span class="feature-wordmark">FoggyTCP &amp; FoggyHTTP · Systems &amp; Networking</span>
             <h2 id="work-title">Networks,<br>from first principles.</h2>
-            <p>Built a complete user-space TCP and streaming HTTP stack in C/C++: socket delay measurements, a user-space TCP implementation with sliding windows, fast retransmission, and congestion control, followed by an HTTP layer and chunked streaming server (<code>foggy-llama</code> / <code>foggy-http</code>) with route registration and request/response parsing.</p>
-            <p>Built and debugged inside an isolated Vagrant/VirtualBox Linux environment to reproduce packet loss, reordering, and congestion deterministically.</p>
+            <p>Implemented a user-space TCP protocol and streaming HTTP stack in C/C++ — covering socket delay measurements, sliding windows, fast retransmission, congestion control, route registration, request/response parsing, and chunked transfer streaming (<code>foggy-http</code> / <code>foggy-llama</code>).</p>
+            <p>Tested and debugged inside an isolated Vagrant/VirtualBox Linux environment to reproduce packet loss, reordering, and congestion deterministically.</p>
             <div class="work-tags">
               <span>C / C++</span><span>USER-SPACE TCP</span><span>HTTP STREAMING</span><span>LINUX</span><span>VAGRANT</span>
             </div>
@@ -151,8 +151,8 @@
           <div class="feature-copy">
             <span class="feature-wordmark">Autonomous Robot Car · Hardware &amp; Embedded</span>
             <h2>Hardware,<br>verified in one take.</h2>
-            <p>Designed, wired, and programmed an autonomous line-tracking robot car on an Arduino Nano and breadboard for HKUST’s <em>Running in HKUST</em> final challenge. Integrated an optical bright-sensing array (front-bar trackers and a bumper sensor) with dual DC motors driven via calibrated differential PWM control.</p>
-            <p>Engineered deterministic state-machine logic to handle T/Y/+ junctions, a 360° turn, square loop, U-curve, 180° turn, S-curve, and white-wall reverse-and-stop — completing the entire 17-task obstacle course in a single demo take.</p>
+            <p>Designed, wired, and programmed an autonomous line-tracking robot car on an Arduino Nano and breadboard for the <em>Running in HKUST</em> track challenge. Integrated an optical bright-sensing array (front-bar trackers and a bumper sensor) with dual DC motors driven via calibrated differential PWM control.</p>
+            <p>Engineered deterministic state-machine logic to handle T/Y/+ junctions, a 360° turn, square loop, U-curve, 180° turn, S-curve, and white-wall reverse-and-stop — completing all 17 obstacle-course tasks in ~20 seconds on the first demo take.</p>
             <div class="work-tags">
               <span>ARDUINO NANO</span><span>PWM MOTOR CONTROL</span><span>OPTICAL SENSORS</span><span>CIRCUIT WIRING</span><span>ONE-TAKE PASS</span>
             </div>
@@ -232,7 +232,7 @@
           <p class="eyebrow">03 / ABOUT</p>
           <h2 id="about-title">I like systems where software meets the physical world.</h2>
           <p>I’m a third-year Electronic Engineering student at the Hong Kong University of Science and Technology. My work sits at the intersection of computer networks, C/C++ systems programming, and embedded circuit design.</p>
-          <p>I learn best by building something concrete, testing it under real constraints, and documenting why it works. FoggyTCP and FoggyHTTP gave me that rigor in networked software; building an autonomous robot car and circuit labs gave me the same discipline in hardware.</p>
+          <p>I learn best by building something concrete, testing it under real constraints, and documenting why it works. FoggyTCP and FoggyHTTP gave me that rigor in networked software; building an autonomous robot car and running circuit labs gave me the same discipline in hardware.</p>
           <p class="about-note">Open to internships in software engineering, computer networking, embedded systems, and hardware/circuit design.</p>
           <div class="profile-links">
             <a href="mailto:whokkan@gmail.com">Email <span aria-hidden="true">↗</span></a>
@@ -251,7 +251,7 @@
           <h2 id="contact-title">Open to<br><em>new opportunities.</em></h2>
         </div>
         <div class="contact-copy">
-          <p>The clearest way to reach me is by email. I’m happy to discuss technical projects, internships, or a hard systems problem worth understanding.</p>
+          <p>The clearest way to reach me is by email. I’m happy to discuss technical projects, internships, or engineering opportunities.</p>
           <a class="email-link" href="mailto:whokkan@gmail.com">whokkan@gmail.com <span aria-hidden="true">↗</span></a>
           <p class="contact-location">Hong Kong<br>BEng Electronic Engineering · HKUST</p>
         </div>

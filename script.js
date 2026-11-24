@@ -1,11 +1,11 @@
 const topics = {
   network: {
-    description: 'Built a full user-space TCP and chunked-streaming HTTP stack in C/C++ from socket fundamentals up to route handling and streaming.',
+    description: 'Built a user-space TCP protocol and chunked-streaming HTTP server in C/C++ — from raw sockets to congestion control and route handling.',
     label: 'Explore FoggyTCP',
     href: '#work'
   },
   code: {
-    description: 'Writing C, C++, and Python to understand systems where packets, processes, and hardware interfaces meet.',
+    description: 'Writing C, C++, Python, and MATLAB to understand systems where packets, signals, and hardware interfaces meet.',
     label: 'See open-source work',
     href: '#open-source'
   },
@@ -15,7 +15,7 @@ const topics = {
     href: '#work'
   },
   hardware: {
-    description: 'Built an autonomous Arduino Nano line-tracking robot car with optical sensors and calibrated PWM motor control — passed in one take.',
+    description: 'Built an autonomous Arduino Nano line-tracking robot car with optical sensors and calibrated PWM motor control — passed in ~20s on the first take.',
     label: 'Explore robot car',
     href: '#hardware-work'
   },
